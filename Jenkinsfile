@@ -42,7 +42,7 @@ pipeline {
                 script {
                     try {
                         // Securely handle Docker credentials with withCredentials
-                        withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
+                        withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials-id', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
                             // Using docker login with secure environment variables
                             sh """
                                 echo \$DOCKER_PASSWORD | docker login -u \$DOCKER_USERNAME --password-stdin
