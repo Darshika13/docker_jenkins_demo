@@ -13,7 +13,7 @@ pipeline {
                     try {
                          git branch: 'main', url:GIT_REPOSITORY_URL
                     } catch (Exception e) {
-                        echo "Failed to clone repository: ${e.message)"
+                        echo "Failed to clone repository: ${e.message}"
                         error "Failed to clone repository"
                      }
                    }
