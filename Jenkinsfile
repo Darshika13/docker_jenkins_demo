@@ -32,7 +32,7 @@ pipeline {
                             """
                      }
                  } catch (Exception e) {
-                     echo "Failed to push Docker image to registry:
+                     echo "Failed to push Docker image to registry"
 ${e.message}"
                      error "Failed to push Docker image"
                  } } } } } }
