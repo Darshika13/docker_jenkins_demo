@@ -6,7 +6,7 @@ pipeline {
         DOCKER_IMAGE_NAME = 'Darshika13/docker_jenkins_demo'
         IMAGE_TAG = '1.0'
     }
-    stage {
+    stages {
         stage('Clone Repository') {
             steps {
                 script {
